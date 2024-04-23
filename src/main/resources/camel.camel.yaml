@@ -1,0 +1,11 @@
+
+- rest:
+    post:
+    - path: "/api/xml"
+      to: "direct:xmlIn"
+- route:
+    id: "my-xml-route"
+    from:
+      uri: "direct:xmlIn"
+      steps:
+        - log : "${body}"
