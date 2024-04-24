@@ -21,7 +21,7 @@ public class AppConfig
         return context.createProducerTemplate();
     }
 
-    @Bean 
+    @Bean("name = Jambo")
     public Jambo jambo()
     {
         return new Jambo();

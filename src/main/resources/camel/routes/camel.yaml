@@ -1,0 +1,13 @@
+- rest:
+    id: rest-be03
+    post:
+      - id: post-fbcc
+        path: /api/xml
+        to: direct:xmlIn
+- route:
+    id: lol
+    from:
+      uri: direct:xmlIn
+      steps:
+        - log: ${body}
+        - bean: "jambo"
